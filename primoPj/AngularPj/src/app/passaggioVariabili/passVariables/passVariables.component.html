@@ -1,0 +1,12 @@
+<p>pass-variables.component works!</p>
+
+<br>
+<br>
+
+@for (item of oggettoDaPassare; track $index) {
+    <p> {{item.nome}} </p>
+}
+
+<br>
+
+<button (click)="mandaDati()">manda dati</button>

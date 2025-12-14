@@ -1,0 +1,12 @@
+
+<br>
+<br>
+<br>
+
+<button matButton="tonal" [disabled]="isDisabled">Basic</button>
+
+<div *ngFor="let persona of data">
+<p [ngStyle]="{color: persona.color}">
+    {{persona.Cognome}}
+</p>
+</div>

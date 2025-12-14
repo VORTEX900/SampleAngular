@@ -1,0 +1,26 @@
+
+<div>
+   <p>lista contatti</p>
+   <div>
+      @for (p of persone; track $index; let i = $index ) {
+         <a routerLink="/contatti/{{i}}"> {{p.nome}} - {{p.Cognome}} </a> 
+         <br>   
+      }
+   </div>
+   <br/>
+   <p>lista contatti da DB Firebase</p>
+   <div> 
+      @for (p of personeFromDB; track $index; let i = $index ) {
+         <form [formGroup]="modificaFormGroup[i]" (ngSubmit)="onSubmit(p.id,modificaFormGroup[i], i)">
+         nome da DB = {{p.nome}} - email da DB = {{p.email}} - colore da DB = {{p.colore}} 
+         - <button matButton="filled" type="button" (click)="onDeletePersona(p.id)">elimina</button>
+         - <button matButton="filled" type="submit" [disabled]="!modificaFormGroup[i].valid">modifica</button>
+         <br/> 
+          <input matInput type="email" name="email"  formControlName="email"  >
+         </form>
+      }
+     
+     
+   </div>
+</div>
+<router-outlet></router-outlet>

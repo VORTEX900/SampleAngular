@@ -1,0 +1,45 @@
+<p>direttive.component works!</p>
+
+<br/>
+<br/>
+
+
+    <div class="example-button-row">
+        <button matButton="filled" >Basic</button>
+        <button matButton="filled" >Basic</button>
+    </div>
+
+    <p *ngIf="isVisible"> visibile1 </p>
+    <p *ngIf="!isVisible"> non visibile1 </p>
+
+    <div *ngIf="isVisible; else bloccoElse2"> visibile2 </div>
+    <ng-template #bloccoElse2><div> non visibile2 </div></ng-template>
+
+    <ng-template *ngIf="isVisible; then bloccoIf else bloccoElse"></ng-template>
+    <ng-template #bloccoIf><div> visibile3 </div></ng-template>
+    <ng-template #bloccoElse><div> non visibile3 </div></ng-template>
+
+    @if (isVisible) {<p> visibile4 </p>}
+    @else {<div> non visibile4 </div>}
+
+<br>
+<br>
+
+    <ul>
+        <li *ngFor="let persona of persone">{{persona.nome}} - {{persona.Cognome}}</li>
+    </ul>
+    <ul>
+        @for (persona of persone; track $index) {<li>{{persona.nome}} - {{persona.Cognome}} @if(persona.isOnline){<span class="cerchioVerde"></span>}@else{<span class="cerchioRosso"></span>} </li>}
+    </ul>
+
+    <div *ngFor="let persona of persone; index as i, even as isEven">
+        <li >{{persona.nome}} - {{persona.Cognome}} {{i}}</li>
+        <span *ngIf="isEven" class="cerchioVerde"></span>
+        <span *ngIf="isEven" class="cerchioRoss"></span>
+    </div>
+
+    <br>
+    
+    <ul>
+        @for (persona of persone; track $index; let odd = $odd) {<li>{{persona.nome}} - {{persona.Cognome}} @if(odd){<span class="cerchioVerde"></span>}@else{<span class="cerchioRosso"></span>} </li>}
+    </ul>

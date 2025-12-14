@@ -1,0 +1,19 @@
+.example-button-row {
+  max-width: 600px;
+}
+
+.cerchioVerde , .cerchioRosso{
+ width: 14px;
+  height: 14px;
+  display: block;
+  float: left;
+  margin: 1px 3px 0px 0px;
+}
+
+.cerchioVerde {
+ background-color: green;
+}
+
+.cerchioRosso {
+  background-color: red;
+}

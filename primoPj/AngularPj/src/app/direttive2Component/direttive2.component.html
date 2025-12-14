@@ -1,0 +1,27 @@
+<p>direttive2.component works!</p>
+
+
+
+<div [ngSwitch] ="numero">
+    <p *ngSwitchCase="1"> A </p>
+    <p *ngSwitchCase="2"> B </p>
+    <p *ngSwitchCase="3"> C </p>
+    <p *ngSwitchDefault> D </p>
+</div>
+
+@switch (numero) {
+    @case (1) { A }
+    @case (2) { B }
+    @case (3) { C }
+    @default { D }
+}
+
+<br>
+<br>
+
+@switch (stringa) {
+    @case ("pippo") { A }
+    @case ("pluto") { B }
+    @case ("paperino") { C }
+    @default { D }
+}

@@ -1,0 +1,28 @@
+<p>Reactive Form works!</p>
+
+<form [formGroup]="homeFormGroup" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input matInput name="nome" formControlName="nome" >
+    </mat-form-field>
+    @if (!homeFormGroup.get("nome").valid && homeFormGroup.get("nome").touched) {<p>Inserisci un Nome</p>}
+    <mat-form-field>
+        <mat-label>E-mail</mat-label>
+        <input matInput type="email" name="email"  formControlName="email" >
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Colori</mat-label>
+        <mat-select name="colore" formControlName="colore" >
+            <mat-option value="verde">Verde</mat-option>
+            <mat-option value="nero">Nero</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Textarea</mat-label>
+        <textarea matInput name="testo" formControlName="testo" ></textarea>
+    </mat-form-field>
+    
+    <div class="example-button-row">
+        <button matButton="filled" type="submit" [disabled]="!homeFormGroup.valid">Invia</button>
+    </div>
+</form>

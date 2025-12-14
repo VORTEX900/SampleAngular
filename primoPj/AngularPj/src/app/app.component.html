@@ -1,0 +1,37 @@
+<app-prova></app-prova>
+
+<app-altro [data]="persone"></app-altro><!---->
+<button matButton="tonal" (click)="onClickCambiaPersone($event)">cambiaPersone</button>
+
+<br>
+
+<p> 
+    <button matButton="tonal" (click)="onClick($event)" >Basic</button> 
+</p>
+
+<br>
+
+<p>
+    <mat-form-field class="example-full-width">
+        <mat-label>Favorite food</mat-label>
+        <input matInput placeholder="Ex. Pizza" value="Sushi" [(ngModel)]="title">
+    </mat-form-field>
+    {{title}}
+</p>
+
+<br>
+
+<h2>scegli colore di evidenza</h2>
+<div>
+    <input type="radio" name="coloreEvidenziatore" (click)="cambiaColoreEvidenziatore('red')">Rosso
+    <input type="radio" name="coloreEvidenziatore" (click)="cambiaColoreEvidenziatore('pink')">Rosa
+    <input type="radio" name="coloreEvidenziatore"(click)="cambiaColoreEvidenziatore('purple')">Viola
+</div>
+
+<p [appHighlight]="colore" defaultColor="blue">prova direttiva</p>
+<p [appHighlight]="colore" defaultColor="black">prova direttiva</p>
+<p [appHighlight]="colore" defaultColor="green">prova direttiva</p>
+
+
+
+

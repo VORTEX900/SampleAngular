@@ -1,0 +1,19 @@
+<p>ng-style.component works!</p>
+
+<ul>
+    <li *ngFor="let persona of persone">
+        <div class="cerchio" [ngStyle]="{'background':persona.color}"></div>
+        <p>{{persona.nome}} - {{persona.Cognome}}</p>
+    </li>
+</ul>
+
+<br>
+
+<ul>
+    @for (persona of persone2; track $index; let index = $index) {
+        <li >
+            <div class="cerchio2" [ngClass]="{'cerchioOnLine':persona.isOnline, 'cerchioOffLine':!persona.isOnline, 'prova':persona.Cognome=='Rinaldi'}">{{index}}</div>
+            <p>{{persona.nome}} - {{persona.Cognome}}</p>
+        </li>
+    }
+</ul>

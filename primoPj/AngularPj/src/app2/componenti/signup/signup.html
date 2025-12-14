@@ -1,0 +1,19 @@
+<h1>Registrazione!</h1>
+
+<form #homeForm="ngForm" (ngSubmit)="onSubmit(homeForm)">
+ 
+    <mat-form-field>
+        <mat-label>E-mail</mat-label>
+        <input matInput type="email" name="email" ngModel required>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput name="password" ngModel required type="password">
+    </mat-form-field>
+
+    
+    <div class="example-button-row">
+        <button matButton="filled" type="submit" [disabled]="!homeForm.valid" >Inserisci</button>
+    </div>
+    
+</form>

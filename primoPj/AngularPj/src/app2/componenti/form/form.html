@@ -1,0 +1,27 @@
+<p>form works!</p>
+
+<form #homeForm="ngForm" (ngSubmit)="onSubmit(homeForm)">
+    <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input matInput name="nome" ngModel required>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>E-mail</mat-label>
+        <input matInput type="email" name="email" ngModel required email>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Colori</mat-label>
+        <mat-select name="colore" ngModel>
+            <mat-option value="verde">Verde</mat-option>
+            <mat-option value="nero">Nero</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Textarea</mat-label>
+        <textarea matInput name="testo" ngModel ></textarea>
+    </mat-form-field>
+    
+    <div class="example-button-row">
+        <button matButton="filled" [disabled]="!homeForm.valid" type="submit">Invia</button>
+    </div>
+</form>

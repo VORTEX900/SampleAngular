@@ -1,0 +1,40 @@
+.cerchio{
+    width: 14px;
+    height: 14px;
+    display: block;
+    float: left;
+    margin: 1px 3px 0px 0px;
+    background-color: blue;
+}
+
+li{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+li > p {
+    margin-bottom: 0;
+}
+
+.cerchio2{
+    width: 30px;
+    height: 30px;
+    display: block;
+    float: left;
+    margin: 1px 3px 0px 0px;
+    background-color: blue;
+    text-align: center;
+   
+}
+
+.cerchioOnLine{
+    background-color: green;
+}
+.cerchioOffLine{
+    background-color: red;
+}
+
+.prova{
+    border-radius: 200%;
+}
